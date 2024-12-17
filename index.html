@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .chat-container {
+            width: 400px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .chat-box {
+            height: 400px;
+            overflow-y: scroll;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+        input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            margin-left: 5px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .message {
+            margin: 10px 0;
+        }
+        .user-message {
+            text-align: right;
+            color: #007BFF;
+        }
+        .bot-message {
+            text-align: left;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message here..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const chatBox = document.getElementById("chat-box");
+        const userInput = document.getElementById("user-input");
+
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement("div");
+            messageDiv.classList.add("message", sender === "user" ? "user-message" : "bot-message");
+            messageDiv.textContent = text;
+            chatBox.appendChild(messageDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        async function sendMessage() {
+            const message = userInput.value.trim();
+            if (message) {
+                addMessage(message, "user");
+                userInput.value = "";
+
+                // Send the message to the Flask API
+                const response = await fetch("http://127.0.0.1:5000/predict", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ message })
+                });
+
+                const data = await response.json();
+                addMessage(data.response, "bot");
+            }
+        }
+    </script>
+</body>
+</html>
