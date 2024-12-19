@@ -1,4 +1,4 @@
-# Chatbot Model Development
+# Bakerly, the Deep Learning Chatbot
 
 ## Introduction
 This project is a contextual chatbot built using TensorFlow and inspired by the article [Contextual Chatbot With TensorFlow](https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077). The chatbot is designed to provide meaningful responses based on general input queries and also those related to Baking by leveraging natural language processing (NLP) techniques and machine learning.
@@ -21,18 +21,18 @@ Refer `requirements.txt` for installing all the dependencies.
 
 
 ## Setup Instructions
-1. **Clone the repository**:
+1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-repo/Chatbot
+   git clone https://github.com/Subhoshri/Chatbot
    cd Chatbot
    ```
 
-2. **Install required libraries**:
+2. **Install required Libraries**:
    ```bash
-   pip install tensorflow numpy nltk json
+   pip install Library-Name
    ```
 
-3. **Prepare the environment**:
+3. **Prepare the Environment**:
    - Download NLTK data (if not already installed):
      ```python
      import nltk
@@ -40,7 +40,16 @@ Refer `requirements.txt` for installing all the dependencies.
      ```
 
 4. **Update the intents file**:
-   Modify the `intents.json` file to add or update chatbot intents and patterns.
+   Modify the `intents.json` file to add or update chatbot intents and patterns.\
+
+5. **Run the Application**:
+   ```python
+   python app.py
+   ```
+
+6. Enter the URL provided after running the previous commands into your web browser.
+
+Bakerly is now ready to chat!
 
 
 ## How It Works
