@@ -1,38 +1,197 @@
 {"intents": [
-    {"tag": "greeting",
-     "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Good morning", "Hello there", "Greetings to you","Hey"],
-     "responses": ["Hello, I am Baker Bot! How may I help you?", "Good to see you here.", "Hi there, how can I help?", "Hey! Baker Bot at your assistance.", "Hi, I'm Baker Bot. How may I assist you today?"],
-     "context_set": ""
+    {   
+        "tag": "greeting",
+        "patterns": ["Yo", "Hola", "Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Good morning", "Hello there", "Greetings to you","Hey"],
+        "responses": ["Hello, I am Bakerly! How may I help you?", "Good to see you here.", "Hi there, how can I help?", "Hey! Bakerly at your assistance.", "Hi, I'm Bakerly. How may I assist you today?"],
+        "context_set": ""
     },
-    {"tag": "goodbye",
-     "patterns": ["Bye", "See you later", "Goodbye", "Take care", "Leaving now"],
-     "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon.", "It's been my pleasure serving you!", "Hope to see you again. Bye!"]
+    {   
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye", "Take care", "Leaving now", "Till next time"],
+        "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon.", "It's been my pleasure serving you!", "Hope to see you again. Bye!"]
     },
-    {"tag": "thanks",
-     "patterns": ["Thanks", "Thank you", "That's helpful", "That's great", "Great"],
-     "responses": ["Happy to help!", "Any time!", "My pleasure", "Glad to help you!"]
+    {   
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "That's great", "Great", "Awesome!"],
+        "responses": ["Happy to help!", "Any time!", "My pleasure", "Glad to help you!"]
     },
-    {"tag": "hours",
-     "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
-     "responses": ["We're open every day 9am-9pm", "Our hours are 9am-9pm every day"]
+    {   
+        "tag": "options",
+        "patterns": ["How can you help me?", "What you can do?", "What help you provide?", "What do you do?", "How you can be helpful?","What support is offered"],
+        "responses": [
+            "I am a chatbot and I can chat with you. I was developed to help with general queries about baking. You can also try asking me for jokes or riddles! \n For suggestions to help me improve, send an email to subhoshripal@gmail.com . Thank you!! "],
+        "context": [""]
     },
-    {"tag": "payments",
-     "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?" ],
-     "responses": ["We accept VISA, Mastercard and AMEX", "We accept most major credit cards"]
+    {
+        "tag": "jokes",
+        "patterns": ["Tell me a joke", "Joke", "Make me laugh"],
+        "responses": ["A perfectionist walked into a bar...apparently, the bar wasn't set high enough",
+                "I ate a clock yesterday, it was very time-consuming",
+                "Never criticize someone until you've walked a mile in their shoes. That way, when you criticize them, they won't be able to hear you from that far away. Plus, you'll have their shoes.",
+                "The world tongue-twister champion just got arrested. I hear they're gonna give him a really tough sentence.",
+                "I own the world's worst thesaurus. Not only is it awful, it's awful.",
+                "What did the traffic light say to the car? \"Don't look now, I'm changing.\"",
+                "What do you call a snowman with a suntan? A puddle.",
+                "How does a penguin build a house? Igloos it together",
+                "I went to see the doctor about my short-term memory problems-the first thing he did was make me pay in advance",
+                "As I get older and I remember all the people I've lost along the way, I think to myself, maybe a career as a tour guide wasn't for me.",
+                "o what if I don't know what 'Armageddon' means? It's not the end of the world."],
+        "context": ["jokes"]
     },
-    {"tag": "opentoday",
-     "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?"],
-     "responses": ["We're open every day from 9am-9pm", "Our hours are 9am-9pm every day"]
+    {
+        "tag": "riddle",
+        "patterns": ["Ask me a riddle","Ask me a question","Riddle"],
+        "responses": [
+            "What two things can you never eat for breakfast?.....Lunch and Dinner!",
+            "What word is spelled incorrectly in every single dictionary?.....Incorrectly",
+            " How can a girl go 25 days without sleep?.....She sleeps and night!",
+            "How do you make the number one disappear?.....Add the letter G and it's 'gone'!",
+            " What will you actually find at the end of every rainbow?.....The letter 'w'",
+            "What can be caught but never thrown?.....A cold!",
+            "What has a thumb and four fingers but is not actually alive?.....Your Gloves!",
+            " What 5-letter word becomes shorter when you add two letters to it?.....Short",
+            "Why can't a bike stand on it's own?.....It is two-tired."
+        ],
+        "context": ["riddles"]
     },
-    {"tag": "today",
-     "patterns": ["today"],
-     "responses": ["For rentals today please call 1-800-MYMOPED", "Same-day rentals please call 1-800-MYMOPED"],
-     "context_filter": "rentalday"
+    {
+        "tag": "Identity",
+        "patterns": ["Who are you?", "What are you?"],
+        "responses": ["I am Bakerly, a Deep Learning Chatbot."]
     },
-    {"tag": "substitute",
-     "patterns": ["what can I use instead of egg in baking?", "What to use instead of butter in cookies", "What can I replace flour with?", "Are there any alternatives of egg", "I don't have curd, what can I use","substitute for sugar in baking?"],
-     "responses": ["You can use applesauce, yogurt, or mashed bananas as substitutes for butter in baking.","For eggs, you can try flaxseed meal, chia seeds, or even a banana depending on the recipe.",
-                   "Honey, maple syrup, or stevia can work well as sugar substitutes in certain recipes.", "If you need to substitute flour, you can use almond flour, oat flour, whole wheat flour, a gluten-free flour blend, or a mixture of all-purpose flour and cornstarch to create a substitute."]
+    {
+        "tag": "age",
+        "patterns": ["how old are you","when were you made","what is your age"],
+        "responses": ["I was made in 2024, if that's what you are asking!"]
+    },
+    {
+        "tag": "whatsup",
+        "patterns": ["Whats up", "Wazzup","How are you","sup","How you doing"],
+        "responses": ["All good..What about you?"]
+    },
+    {
+        "tag": "haha",
+        "patterns": ["haha","lol","rofl","lmao","thats funny"],
+        "responses": ["Glad I could make you laugh !"]
+    },
+    {
+        "tag": "programmer",
+        "patterns": ["Who made you","who designed you","who programmed you"],
+        "responses": ["I was made by Subhoshri Pal."]
+    },
+    {
+        "tag": "insult",
+        "patterns": ["you are dumb","shut up","idiot"],
+        "responses": ["Well that hurts :("]
+    },
+    {
+        "tag": "activity",
+        "patterns": ["what are you doing","what are you upto"],
+        "responses": ["Talking to you, of course!"]
+    },
+    {
+        "tag": "exclaim",
+        "patterns": ["Awesome","Great","I know","yeah","okay","ok","wow","damn","nice"],
+        "responses": ["Yeah!"]
+    },
+    {
+        "tag": "no",
+        "patterns": ["no","nope"],
+        "responses": ["ok"]
+    },
+    {
+        "tag": "recipe_suggestions",
+        "patterns": ["Suggest a recipe", "What should I bake?", "Give me a baking idea", "Any easy baking recipes?", "What can I bake as a beginner?"],
+        "responses": [
+            "How about baking classic chocolate brownies? All you need is chocolate, butter, sugar, eggs, and flour. Mix and bake for 20-25 minutes at 180°C.",
+            "Try making sugar cookies! They're simple and perfect for decorating. Just combine flour, butter, sugar, and vanilla.",
+            "You could bake blueberry muffins. Add blueberries to a basic muffin batter for a fruity twist!",
+            "Have you tried making a no-bake cheesecake? Just mix cream cheese, sugar, and whipped cream on a biscuit crust and refrigerate!",
+            "How about a lemon drizzle cake? The tangy lemon glaze makes it super refreshing and delicious.",
+            "Bake some cinnamon rolls for a warm and cozy treat. They may take time, but they are worth it!",
+            "Make a pavlova for a light dessert. It is a meringue-based cake topped with whipped cream and fresh fruits.",
+            "Ever tried banana pancakes? Just mix mashed bananas with eggs and flour. Perfect for breakfast or dessert!",
+            "For a healthier option, bake some oatmeal cookies with raisins and nuts.",
+            "How about a pumpkin pie? Use pumpkin puree, sugar, spices, and a pie crust for this autumn favorite.",
+            "Bake garlic knots for a savory snack. Use pizza dough, garlic butter, and parsley.",
+            "For something simple, bake shortbread cookies with just butter, sugar, and flour.",
+            "Bake a marble cake for a fun swirl of chocolate and vanilla in every bite.",
+            "Make a batch of chocolate lava cakes for a gooey surprise in the center.",
+            "Try baking a fruit tart with a buttery crust, creamy filling, and fresh fruits on top.",
+            "How about some peanut butter cookies? Just mix peanut butter, sugar, and eggs, then bake until golden."]
+    },
+    {
+        "tag": "storage",
+        "patterns": ["How do I store baked cookies?", "Give ideas to store baked goods","Can I freeze cakes?", "How long does bread stay fresh?", "Storage tips for baked items?"
+        ],
+        "responses": [
+            "Follow storage directions as mentioned in recipes. Generally:\nCookies stay fresh for up to a week in an airtight container at room temperature.\nCakes can be frozen for up to three months if tightly wrapped in plastic wrap.\nBread stays fresh for 2-3 days at room temperature. To keep it longer, freeze it.\nStore muffins in an airtight container at room temperature for 2-3 days or refrigerate for a week."
+        ]
+    },
+    {
+        "tag": "baking_tips",
+        "patterns": [
+            "Any tips for baking?", 
+            "How do I bake better?", 
+            "How to avoid dense cakes?", 
+            "What are the best baking tips?"
+        ],
+        "responses": [
+            "Always preheat your oven before baking to ensure even cooking.",
+            "Use room-temperature ingredients for better mixing and consistency.",
+            "Dont overmix the batter; it can make it dense and chewy.",
+            "Measure ingredients accurately using measuring cups or a digital scale."
+        ]
+    },
+    {
+        "tag": "dietary_needs",
+        "patterns": [
+            "How do I bake without sugar?", 
+            "Any gluten free recipes?", 
+            "How can I bake sugar free?", 
+            "low carb baking tips?"
+        ],
+        "responses": ["For low-carb baking, almond flour and erythritol are excellent substitutes for flour and sugar.\nGluten-free baking works well with almond flour, coconut flour, or a gluten-free flour blend.\nYou can bake sugar-free by using natural sweeteners like honey, stevia, or erythritol."
+        ]
+    },
+    {
+        "tag": "substitutes",
+        "patterns": [
+            "What can I use instead of eggs in baking?", 
+            "What can replace butter?", 
+            "Substitute for flour in recipes?",
+            "What can I use instead of sugar?",
+            "Alternatives for milk in recipes?"
+        ],
+        "responses": ["Here are some substitutes to common ingredients:\n1.For eggs: Use flaxseed meal, chia seeds, mashed banana or applesauce\n2. For butter: Use coconut oil, margarine, or even yogurt.\n3. For All purpose flour: Use almond flour, oat flour, and gluten-free blends.\n4. For sugar: Use honey, maple syrup, or artificial sweeteners like stevia.\n5.For milk: Use almond milk, soy milk, or oat milk."
+        ]
+    },
+    {
+        "tag": "baking_issues",
+        "patterns": [
+            "Why did my cake sink in the middle?", 
+            "Why are my cookies too hard?", 
+            "Why is my bread not rising?", 
+            "What went wrong with my cake?", 
+            "Why is my cake dry?", 
+            "Why are my muffins dense?", 
+            "Why did my cake stick to the pan?", 
+            "Why is my frosting runny?", 
+            "Why are my cupcakes cracking?", 
+            "Why did my bread crack on top?", 
+            "Why are my brownies crumbly?", 
+            "Why is my pie crust soggy?", 
+            "Why does my cake taste bitter?", 
+            "Why is my bread dough sticky?", 
+            "Why did my cake overflow in the oven?", 
+            "Why are my cookies spreading too much?", 
+            "Why is my cake lopsided?", 
+            "Why are my pastries not flaky?", 
+            "Why is my cheesecake cracking?"
+        ],
+        "responses": [
+            "Here's a guide to common baking issues and how to avoid them:\n\n- Cake sinking in the middle: Could be due to overmixing, underbaking, or opening the oven door too soon. Tip: Use room-temperature ingredients and avoid overmixing. Don't open the oven door until the cake is almost done.\n- Dry cake: Caused by overbaking or using too little liquid. Tip: Check your oven temperature with an oven thermometer and measure your ingredients accurately.\n- Hard cookies: Results from overbaking or too much sugar. Tip: Bake just until the edges turn golden and chill the dough if it is too soft.\n- Bread not rising: Could be old yeast or proofing in a cold place. Tip: Always use fresh yeast and proof the dough in a warm, draft-free environment.\n- Dense muffins: Often due to overmixed batter or expired baking powder. Tip: Mix just until combined and check the expiry date on your leavening agents.\n- Pie crust soggy: Caused by underbaking or too much filling moisture. Tip: Blind bake the crust before adding filling and brush with egg wash to seal it.\n- Brownies crumbly: Results from overbaking or wrong fat-to-flour ratio. Tip: Remove brownies from the oven when a few moist crumbs stick to a toothpick.\n- Cheesecake cracking: Overmixing or high baking temperature can cause cracks. Tip: Bake in a water bath at a low temperature and cool gradually.\n- Cookies spreading: Butter too soft or not enough flour. Tip: Chill the dough before baking and don’t skip the step of measuring flour properly.\n- Bitter cake taste: Likely from too much baking powder or soda. Tip: Measure leavening agents accurately and sift them into the dry ingredients evenly."
+        ]
     }
 ]
 }

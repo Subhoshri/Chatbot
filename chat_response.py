@@ -49,7 +49,7 @@ def classify(sentence):
     results.sort(key=lambda x: x[1], reverse=True)
     return [{"intent": classes[r[0]], "probability": r[1]} for r in results]
 
-bot_name = "Baker Bot"
+bot_name = "Bakerly"
 def response(sentence, userID='123', show_details=False):
     results = classify(sentence)
     if results:
