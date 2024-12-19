@@ -1,7 +1,7 @@
 # Chatbot Model Development
 
 ## Introduction
-This project is a contextual chatbot built using TensorFlow and inspired by the article [Contextual Chatbot With TensorFlow](https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077). The chatbot is designed to provide meaningful responses based on input queries in a Library by leveraging natural language processing (NLP) techniques and machine learning.
+This project is a contextual chatbot built using TensorFlow and inspired by the article [Contextual Chatbot With TensorFlow](https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077). The chatbot is designed to provide meaningful responses based on general input queries and also those related to Baking by leveraging natural language processing (NLP) techniques and machine learning.
 
 ## Features
 - Tokenization and stemming of input text for preprocessing.
@@ -16,9 +16,8 @@ This project is a contextual chatbot built using TensorFlow and inspired by the 
   - TensorFlow
   - Numpy
   - NLTK
-  - Json
-  - Pickle
-  - Random (built-in)
+ 
+Refer `requirements.txt` for installing all the dependencies.
 
 
 ## Setup Instructions
@@ -46,8 +45,8 @@ This project is a contextual chatbot built using TensorFlow and inspired by the 
 
 ## How It Works
 ### 1. **Data Preprocessing**
-   - The `intents.json` file contains training data in the form of patterns, their associated tags (and contexts).
-   - Words in patterns are tokenized, and stemmed using NLTK's Stemmer.
+   - The `intents.json` file contains training data in patterns, and their associated tags (and contexts).
+   - Words in patterns are tokenized and stemmed using NLTK's Stemmer.
    - A bag-of-words representation is generated for each pattern.
 
 ### 2. **Model Training**
