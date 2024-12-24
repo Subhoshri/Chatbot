@@ -1,7 +1,7 @@
 # Bakerly, the Deep Learning Chatbot
 
 ## Introduction
-This project is a contextual chatbot built using TensorFlow and inspired by the article [Contextual Chatbot With TensorFlow](https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077). The chatbot is designed to provide meaningful responses based on general input queries and also those related to Baking by leveraging natural language processing (NLP) techniques and machine learning.
+This project is a contextual chatbot built using TensorFlow. The chatbot is designed to provide meaningful responses based on general input queries and those related to baking by leveraging natural language processing (NLP) techniques and machine learning.
 
 ## Features
 - Tokenization and stemming of input text for preprocessing.
@@ -17,7 +17,7 @@ This project is a contextual chatbot built using TensorFlow and inspired by the 
   - Numpy
   - NLTK
  
-Refer `requirements.txt` for installing all the dependencies.
+Refer to `requirements.txt` for installing all the dependencies.
 
 
 ## Setup Instructions
@@ -90,7 +90,7 @@ Bakerly is now ready to chat!
 
 
 ## References
-- [Chatbots Magazine Article](https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077)
+- [Chatbots With TensorFlow Article](https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077)
 - TensorFlow Documentation: [https://www.tensorflow.org](https://www.tensorflow.org)
 
 ---
