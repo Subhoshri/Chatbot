@@ -40,7 +40,7 @@ Refer to `requirements.txt` for installing all the dependencies.
      ```
 
 4. **Update the intents file**:
-   Modify the `intents.json` file to add or update chatbot intents and patterns.\
+   Modify the `intents.json` file to add or update chatbot intents and patterns.
 
 5. **Run the Application**:
    ```python
