@@ -90,7 +90,6 @@ Bakerly is now ready to chat!
 
 
 ## References
-- [Chatbots With TensorFlow Article](https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077)
 - TensorFlow Documentation: [https://www.tensorflow.org](https://www.tensorflow.org)
 
 ---
